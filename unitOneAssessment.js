@@ -7,12 +7,13 @@ let assert = require('assert')
 const isOdd = num => num % 2 === 1
 
 // Uncomment out the next line to test your solution
-runQ1Tests()
+// runQ1Tests()
 
 
 // Question Two:
 
 // Write a function called numberOfDigits that returns how many digits are in a given number
+const numberOfDigits = num => (num+"").length
 
 // Uncomment out the next line to test your solution
 // runQ2Tests()
