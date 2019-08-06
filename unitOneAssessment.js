@@ -69,12 +69,14 @@ const getLocations = arr => arr.map(e => e.location);
 // ["Algeria", "Belize", "China", "Denmark"]
 
 // Uncomment out the next line to test your solution
-runQ5Tests();
+// runQ5Tests();
 
 // Question Six:
 
 // Write a function called onlyOddStrings that takes in an array of strings as input and returns an array that only includes strings with an odd number of characters
 // Your function should use a higher-ordered function (e.g map, filter, reduce, every, sort) in its implementation
+
+const onlyOddStrings = arr => arr.filter( e => e.length % 2 === 1)
 
 // Uncomment out the next line to test your solution
 // runQ6Tests()
