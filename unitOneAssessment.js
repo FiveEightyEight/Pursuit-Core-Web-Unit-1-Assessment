@@ -38,16 +38,14 @@ const disemvowel = str => str.replace(/[aeiou]/gi, "");
 // Write a function called secondSmallest that returns the second smallest number in an array
 const secondSmallest = arr => {
 	if (arr.length <= 1) return arr[0];
-	let sm = arr[0] > arr[1] ? arr[1] : arr[0];
-	let ss = arr[0] < arr[1] ? arr[1] : arr[0];
-	for (let i = 2; i < arr.length; i++) {
-		if (ss > arr[i]) {
-			if (sm > arr[i]) {
-				ss = sm;
-				sm = arr[i];
-			} else {
-				ss = arr[i];
-			}
+	let sm = Infinity;
+	let ss = Infinity;
+	for (let n of arr) {
+		if (sm > n) {
+			ss = sm;
+			sm = n;
+		} else if (ss > n) {
+			ss = n;
 		}
 	}
 	return ss;
