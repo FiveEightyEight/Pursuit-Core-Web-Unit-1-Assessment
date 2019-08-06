@@ -76,7 +76,7 @@ const getLocations = arr => arr.map(e => e.location);
 // Write a function called onlyOddStrings that takes in an array of strings as input and returns an array that only includes strings with an odd number of characters
 // Your function should use a higher-ordered function (e.g map, filter, reduce, every, sort) in its implementation
 
-const onlyOddStrings = arr => arr.filter( e => e.length % 2 === 1)
+const onlyOddStrings = arr => arr.filter(e => e.length % 2 === 1);
 
 // Uncomment out the next line to test your solution
 // runQ6Tests()
@@ -95,9 +95,20 @@ const onlyOddStrings = arr => arr.filter( e => e.length % 2 === 1)
 //b.
 // Make a function called getAllDayDescriptions that takes in an array of Day objects and returns an array of their descriptions.  Use a higher-ordered function (e.g map, filter, reduce, every, sort) in your implementation.
 // The output should be in the same order as the input
+class Day {
+	constructor(temperature, weather) {
+		this.temperature = temperature;
+		this.weather = weather;
+	}
 
+	getDescription() {
+		return `It is ${this.temperature} degrees and ${this.weather}`;
+	}
+}
+
+const getAllDayDescriptions = arr => arr.map(e => e.getDescription());
 // Uncomment out the next line to test your solution
-// runQ7Tests()
+// runQ7Tests();
 
 // The code below is used to test your solutions.  Feel free to look over it, but do not change any of it.
 
