@@ -36,9 +36,24 @@ const disemvowel = str => str.replace(/[aeiou]/gi, "");
 
 // Question Four:
 // Write a function called secondSmallest that returns the second smallest number in an array
-
+const secondSmallest = arr => {
+	if (arr.length <= 1) return arr[0];
+	let sm = arr[0] > arr[1] ? arr[1] : arr[0];
+	let ss = arr[0] < arr[1] ? arr[1] : arr[0];
+	for (let i = 2; i < arr.length; i++) {
+		if (ss > arr[i]) {
+			if (sm > arr[i]) {
+				ss = sm;
+				sm = arr[i];
+			} else {
+				ss = arr[i];
+			}
+		}
+  }
+  return ss;
+};
 // Uncomment out the next line to test your solution
-// runQ4Tests()
+runQ4Tests()
 
 // Question Five:
 // Write a function called getLocations that takes in an array of objects that look like the array below,
