@@ -21,7 +21,7 @@ const numberOfDigits = num => (num + "").length;
 
 // Write a function called disemvowel that removes all of the vowels from a string.
 // Treat y as a consonant, not a vowel
-const disemvowel = str => {
+const disemvowel2 = str => {
 	const vowels = { a: true, e: true, i: true, o: true, u: true };
 	const arr = str.split("");
 	return arr.reduce((acc, e) => {
@@ -29,6 +29,8 @@ const disemvowel = str => {
 		return acc;
 	}, "");
 };
+
+const disemvowel = str => str.replace(/[aeiou]/gi, "");
 // Uncomment out the next line to test your solution
 // runQ3Tests();
 
