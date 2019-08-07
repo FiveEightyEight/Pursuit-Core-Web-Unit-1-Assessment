@@ -75,6 +75,7 @@ const getLocations = arr => arr.map(e => e.location);
 // Your function should use a higher-ordered function (e.g map, filter, reduce, every, sort) in its implementation
 
 const onlyOddStrings = arr => arr.filter(e => e.length % 2 === 1);
+// const onlyOddStrings = arr => arr.filter(e => isOdd(e.length));
 
 // Uncomment out the next line to test your solution
 // runQ6Tests()
